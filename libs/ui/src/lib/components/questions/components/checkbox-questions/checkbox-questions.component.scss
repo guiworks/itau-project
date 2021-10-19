@@ -1,0 +1,22 @@
+:host {
+  padding: 30px;
+  margin-top: 50px;
+
+  .container-checkbox {
+    bottom: 0;
+    right: 0;
+    margin-bottom: -5px;
+  }
+
+  .detail {
+    color: var(--primary-color-itau);
+  }
+
+  ::ng-deep nb-radio.status-basic {
+    display: inline;
+
+    label {
+      min-width: 150px;
+    }
+  }
+}

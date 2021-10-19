@@ -1,6 +1,56 @@
 {
   "version": 1,
   "projects": {
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "itau",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/src/**/*.ts",
+              "libs/core/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "interceptor": {
+      "projectType": "library",
+      "root": "libs/interceptor",
+      "sourceRoot": "libs/interceptor/src",
+      "prefix": "itau",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/interceptor"],
+          "options": {
+            "jestConfig": "libs/interceptor/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/interceptor/src/**/*.ts",
+              "libs/interceptor/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "seguros": {
       "projectType": "application",
       "root": "apps/seguros",
@@ -21,7 +71,10 @@
               "apps/seguros/src/favicon.ico",
               "apps/seguros/src/assets"
             ],
-            "styles": ["apps/seguros/src/styles.scss"],
+            "styles": [
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
+              "apps/seguros/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -117,6 +170,28 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/seguros-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "itau",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui"],
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui/src/**/*.ts", "libs/ui/src/**/*.html"]
           }
         }
       }

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/index';
+@import 'assets/theme/index';
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: Titillium Web;
+  src: url('assets/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Titillium Web Semibold;
+  src: url('assets/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+}
+

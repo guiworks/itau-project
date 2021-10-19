@@ -1,0 +1,29 @@
+<ng-container *ngIf="coverages">
+  <form [formGroup]="itemForm">
+    <div class="row card-container mt-3">
+      <ng-container formArrayName="questoes">
+        <div *ngFor="let item of coverages; let index = index" class="col-md-4 p-2">
+          <ng-container [formGroupName]="index">
+            <div class="card-checkbox position-relative">
+              <span class="title">{{item.nome}}</span>
+              <p>{{item.descricao}}</p>
+              <a><p (click)="openDetailModal(item)" class="detail cursor-pointer">ver detalhes</p></a>
+              <div class="container-checkbox position-absolute">
+                <nb-checkbox
+                  (ngModelChange)="onSubmit($event)"
+                  [checked]="item.cobertura_obrigatoria"
+                  [disabled]="item.cobertura_obrigatoria"
+                  formControlName="escolhido"
+                >
+                </nb-checkbox>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </form>
+  <button (click)="onSubmit(itemForm)" [disabled]="!itemForm.valid" class="mt-4 bg-button" nbButton>continuar cotação
+  </button>
+</ng-container>
+

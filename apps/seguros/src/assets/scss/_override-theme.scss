@@ -1,0 +1,43 @@
+/* fonts */
+
+span, p, h1, h2, h3, h4, h5, h6, title {
+  font-family: Titillium Web, serif;
+}
+
+h3, .nb-theme-default h3, .nb-theme-default .h3 {
+  font-size: 1.3em;
+  line-height: 23px;
+  color: var(--color-default);
+}
+
+/* header */
+
+.nb-theme-default nb-layout-header nav {
+  padding: 0.75rem 4rem 0.75rem 4rem;
+}
+
+/* button */
+
+button {
+  text-transform: none !important;
+}
+
+.nb-theme-default [nbButton].appearance-filled.status-basic, .nb-theme-default .appearance-filled.status-basic:hover[nbButtonToggle] {
+  border: none;
+  background-color: var(--primary-color-itau);
+
+  &:hover:not([disabled]) {
+    background-color: var(--primary-color-itau);
+  }
+
+  &:active {
+    background-color: var(--primary-color-itau);
+  }
+}
+
+/* checkbox */
+
+.nb-theme-default nb-checkbox .custom-checkbox {
+  width: 2.15rem;
+  height: 2.15rem;
+}

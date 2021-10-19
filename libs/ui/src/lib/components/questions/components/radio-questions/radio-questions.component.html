@@ -1,0 +1,29 @@
+<form [formGroup]="itemForm">
+  <ng-container formArrayName="questoes">
+    <ng-container *ngFor="let item of questionsList; let index = index">
+      <div [formGroupName]="index" class="row pb-3">
+        <div class="col-md-3 align-self-center">
+          {{ item.texto_questao }}
+        </div>
+        <div class="col-md-9">
+          <nb-radio-group
+            [name]="item.id_questao"
+            formControlName="id_resposta"
+          >
+            <nb-radio
+              *ngFor="let responses of item.respostas; let index = index"
+              [value]="responses.id_resposta"
+              class="d-inline"
+            >
+              {{ responses.texto_resposta }}
+            </nb-radio>
+          </nb-radio-group>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</form>
+
+<button (click)="onSubmit(itemForm)" [disabled]="!itemForm.valid" class="pt-2 bg-button" nbButton>continuar cotação
+</button>
+

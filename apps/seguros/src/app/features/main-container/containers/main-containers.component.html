@@ -1,0 +1,15 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <img class="logotipo" src="/assets/images/logotipo-header-with-subtitle.png" alt="logotipo itau"/>
+
+    <div class="container-menu">
+      <a (click)="toggle()" href="#">
+        <nb-icon [icon]="'menu'"></nb-icon>
+      </a>
+    </div>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>

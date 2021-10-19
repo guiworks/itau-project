@@ -1,0 +1,53 @@
+<div class="position-relative">
+  <div class="position-absolute bg-infos">
+    <span class="bg-title"><span
+      class="font-weight-bold">existe coisa melhor do que se sentir seguro em casa?</span><br>encontre o plano residencial ideal pra você</span>
+    <br>
+    <button (click)="scrollTo('questions')" class="bg-button" nbButton>faça sua cotação</button>
+  </div>
+  <img class="image bg-background" src="/assets/images/bg-header.png"/>
+</div>
+
+<div class="row card-container">
+  <div class="col-md-4">
+    <div class="card-info">
+      <img class="card-icon" src="assets/images/geladeira-eletrodomesticos.png"/>
+      <span class="title">reparos de eletrodomésticos</span>
+      <p>a geladeira quebrou ou o freezer parou de funcionar? Mandamos um técnico para te ajudar.</p>
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card-info">
+      <img class="card-icon" src="assets/images/assistencia-residencial.png"/>
+      <span class="title">serviços de encanador</span>
+      <p>rolou aquele vazamento? Sem estresse, temos o serviço de encanador para você.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card-info">
+      <img class="card-icon" src="assets/images/chave.png"/>
+      <span class="title">chaveiro</span>
+      <p>perdeu suas chaves? A assistência manda um chaveiro até você.</p>
+    </div>
+  </div>
+</div>
+
+<div class="po-md-12">
+  <div class="horizontal-bar">
+    <h2>quer saber quanto custa seu seguro<span class="different-color-text">?</span></h2>
+    <h3>comece respondendo as perguntas abaixo e descubra :)</h3>
+  </div>
+  <img alt="seta para baixo" class="arrow-down" src="/assets/images/icons/arrow-down.svg"/>
+</div>
+
+
+<div id="questions">
+  <itau-radio-questions (continue)="fetchAnswerQuestion($event)"
+                        [questionsList$]="questionList$"></itau-radio-questions>
+  <itau-checkbox-questions
+    (continue)="fetchAnswerCheckbox($event)"
+    *ngIf="showCheckboxesArea"
+    [checkboxList$]="checkboxList$">
+  </itau-checkbox-questions>
+</div>

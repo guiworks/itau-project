@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@itau/core": ["libs/core/src/index.ts"],
+      "@itau/interceptor": ["libs/interceptor/src/index.ts"],
+      "@itau/ui": ["libs/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

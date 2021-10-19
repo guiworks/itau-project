@@ -1,0 +1,114 @@
+:host {
+
+  @media only screen and (min-width: 959px) {
+    .bg-title{
+      font-size: 1.5em;
+    }
+
+    .bg-infos {
+      padding: 0 60px 60px;
+      bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 959px) {
+    .bg-title{
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .bg-title{
+      font-size: 1em;
+    }
+
+    .bg-infos {
+      padding: 0 60px 60px;
+      bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .bg-title{
+      font-size: 1em;
+    }
+
+    .bg-infos {
+      padding: 0 30px 30px;
+      bottom: 0;
+    }
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .bg-title{
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 479px) {
+    .bg-title{
+      font-size: 0.7em;
+    }
+
+    .bg-infos {
+      padding: 0 20px 0;
+      bottom: 0;
+    }
+
+    ::ng-deep {
+      button.bg-button.appearance-filled.size-medium.shape-rectangle.status-basic.nb-transition {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  .bg-background {
+    border-bottom-right-radius: 30px;
+    border-bottom: 5px solid var(--primary-color-itau);
+    width: 100%;
+    height: auto;
+  }
+
+  .bg-title {
+    position: relative;
+    color: #fff;
+    line-height: 1.4em;
+  }
+
+  .bg-button {
+    margin-top: 30px;
+    position: relative;
+    background-color: var(--color-itau);
+  }
+
+  .card-container {
+    padding-top: 70px;
+  }
+
+  .horizontal-bar {
+    margin-top: 100px;
+    background: var(--primary-color-itau);
+    padding: 10px 30px;
+    color: #fff;
+    text-align: left;
+    border-radius: 3px;
+
+    h2, h3 {
+      color: #fff;
+    }
+
+    .different-color-text {
+      color: var(--secondary-color-itau);
+    }
+  }
+
+  .arrow-down {
+    display: block;
+    margin: auto;
+    width: 20px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+  }
+}

@@ -1,0 +1,11 @@
+:host {
+  padding: 30px;
+
+  ::ng-deep nb-radio.status-basic {
+    display: inline;
+
+    label {
+      min-width: 150px;
+    }
+  }
+}
