@@ -3,6 +3,7 @@ import {QuestionForm, QuestionList} from "../../models";
 import {FormArray, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Observable} from "rxjs";
 import {finalize} from "rxjs/operators";
+import {scrollToId} from "@itau/core";
 
 @Component({
   selector: 'itau-radio-questions',
@@ -41,10 +42,10 @@ export class RadioQuestionsComponent implements OnInit {
   }
 
   onSubmit({value, valid}: { value: QuestionForm, valid: boolean }) {
-    if(!valid) return
+    if (!valid) return
 
     //TODO: Para checagem de resultados
-    console.log(this.itemForm.value);
+    console.log(value);
 
     this.continue.emit(true)
   }

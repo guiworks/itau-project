@@ -1,11 +1,12 @@
 <nb-layout>
   <nb-layout-header fixed>
-    <img class="logotipo" src="/assets/images/logotipo-header-with-subtitle.png" alt="logotipo itau"/>
+    <img alt="logotipo itau" class="logotipo" src="/assets/images/logotipo-header-with-subtitle.png"/>
 
     <div class="container-menu">
       <a (click)="toggle()" href="#">
         <nb-icon [icon]="'menu'"></nb-icon>
       </a>
+      <a class="ml-5 text-decoration-none" routerLink="/dashboard">home</a>
     </div>
   </nb-layout-header>
 

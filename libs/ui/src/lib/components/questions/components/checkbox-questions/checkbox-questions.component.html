@@ -1,4 +1,10 @@
-<ng-container *ngIf="coverages">
+<div *ngIf="coverages" class="pt-90" id="checkboxesQuestions">
+  <div class="po-md-12">
+    <div class="horizontal-bar">
+      <h2>agora que você já sabe o que são coberturas, que tal selecionar as suas?</h2>
+    </div>
+  </div>
+
   <form [formGroup]="itemForm">
     <div class="row card-container mt-3">
       <ng-container formArrayName="questoes">
@@ -25,5 +31,5 @@
   </form>
   <button (click)="onSubmit(itemForm)" [disabled]="!itemForm.valid" class="mt-4 bg-button" nbButton>continuar cotação
   </button>
-</ng-container>
+</div>
 

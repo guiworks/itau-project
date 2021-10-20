@@ -4,6 +4,7 @@ import {CheckboxQuestionsList, QuestionList} from "@itau/ui";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {ViewportScroller} from "@angular/common";
+import {scrollToId} from '@itau/core';
 
 @Component({
   selector: 'itau-dashboard-container',
@@ -31,6 +32,9 @@ export class DashboardContainerComponent implements OnInit {
   fetchAnswerQuestion(isFinished: boolean) {
     if (isFinished) {
       this.showCheckboxesArea = true;
+      setTimeout(() => {
+        scrollToId('checkboxesQuestions');
+      }, 100)
     }
   }
 
@@ -40,11 +44,7 @@ export class DashboardContainerComponent implements OnInit {
     }
   }
 
-  scrollTo(questions: string) {
-    document.getElementById(questions)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+  scroll(id: string) {
+    scrollToId(id)
   }
 }
